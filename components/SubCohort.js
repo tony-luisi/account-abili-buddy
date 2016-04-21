@@ -40,13 +40,13 @@ class SubCohort extends Component {
 
   buildCheckedIn () {
     return this.state.checkedIn.map(function(prsn, i){
-      return <Person key={i} name={prsn} isChecked={true} callback={this.checkOut} />
+      return <Person key={i} name={prsn} isChecked={true} callback={this.checkOut.bind(this)} />
     }.bind(this))
   }
 
   buildCheckedOut () {
     return this.state.checkedOut.map(function(prsn, i){
-      return <Person key={i} name={prsn}  isChecked={false} callback={this.checkIn} />
+      return <Person key={i} name={prsn}  isChecked={false} callback={this.checkIn.bind(this)} />
     }.bind(this))
   }
 
