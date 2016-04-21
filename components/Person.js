@@ -3,16 +3,17 @@ import React, {Component} from 'react'
 class Person extends Component {
   constructor(props){
     super(props)
-    this.state = {checkedIn: false}
   }
-  checkIn(){
-    this.setState({checkedIn: !this.state.checkedIn })
+
+  clicky () {
+    console.log("clicked!!", this.props.name)
+    this.props.callback(this.props.name)
   }
 
   render(){
-    var checkIn = this.state.checkedIn ? "True" : "False"
+    var checkIn = this.props.isChecked ? "True" : "False"
     return (
-      <div onClick={this.checkIn.bind(this)}>
+      <div onClick={this.clicky.bind(this)}>
         <h3>Name: {this.props.name}</h3>
       <p>Checked In? {checkIn}</p>
       </div>

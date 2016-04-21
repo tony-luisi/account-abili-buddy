@@ -12,7 +12,7 @@ class Cohort extends Component {
         <h1>{this.props.name}</h1>
         <div>
           {subgroups.map(function(subgroup, i){
-            return <SubCohort key={i} name={subgroup.name} people={subgroup.people}/>
+            return <SubCohort key={i} name={subgroup.name} checkedIn={subgroup.checkedIn} checkedOut={subgroup.checkedOut} />
           })}
         </div>
       </div>

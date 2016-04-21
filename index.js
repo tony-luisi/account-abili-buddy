@@ -3,7 +3,25 @@ import {render} from 'react-dom'
 import Cohort from './components/Cohort'
 
 
-var accountability = [ {name: "Pizza Cats", people: ["Scully", "Ollie", "Vicken", "Sam", "Maxine", "Lucy"]}, {name: "Balcony", people: ["Tony", "Rahmona", "James", "Mahuta", "Daniel"]}]
+var accountability = [
+  { name: "Pizza Cats",
+    checkedOut: ["Scully",
+            "Ollie",
+            "Vicken",
+            "Sam",
+            "Lucy"
+          ],
+    checkedIn: ["Maxine"]
+  },
+  { name: "Balcony",
+    checkedOut: ["Tony",
+             "Rahmona",
+             "James",
+             "Daniel"
+           ],
+    checkedIn: ["Mahuta"]
+  }
+]
 
 
 
