@@ -6,7 +6,6 @@ class Person extends Component {
   }
 
   clicky () {
-    console.log("clicked!!", this.props.name)
     this.props.callback(this.props.name)
   }
 
@@ -20,8 +19,5 @@ class Person extends Component {
     )
   }
 }
-
-
-
 
 export default Person

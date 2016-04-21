@@ -11,9 +11,6 @@ class SubCohort extends Component {
   }
 
   checkOut(name) {
-    console.log("outty name: ", name)
-    console.log(this.props)
-    console.log(this.state)
     var tempIn = this.state.checkedIn.filter(function (each) {
       return each !== name
     })
@@ -26,7 +23,6 @@ class SubCohort extends Component {
   }
 
   checkIn(name) {
-    console.log("inny name: ", name)
     var tempOut = this.state.checkedOut.filter(function (each) {
       return each !== name
     })
@@ -38,18 +34,6 @@ class SubCohort extends Component {
                  })
   }
 
-  buildCheckedIn () {
-    return this.state.checkedIn.map(function(prsn, i){
-      return <Person key={i} name={prsn} isChecked={true} callback={this.checkOut.bind(this)} />
-    }.bind(this))
-  }
-
-  buildCheckedOut () {
-    return this.state.checkedOut.map(function(prsn, i){
-      return <Person key={i} name={prsn}  isChecked={false} callback={this.checkIn.bind(this)} />
-    }.bind(this))
-  }
-
   render(){
 
     return (
@@ -58,11 +42,17 @@ class SubCohort extends Component {
 
         <div className='sub-cohort-lists'>
           <div className='lists'>
-            {this.buildCheckedIn()}
+            <h3>Checked In:</h3>
+            {this.state.checkedIn.map(function(prsn, i){
+              return <Person key={i} name={prsn} isChecked={true} callback={this.checkOut.bind(this)} />
+            }.bind(this))}
           </div>
 
           <div className='lists'>
-            {this.buildCheckedOut()}
+            <h3>Checked Out:</h3>
+            {this.state.checkedOut.map(function(prsn, i){
+              return <Person key={i} name={prsn}  isChecked={false} callback={this.checkIn.bind(this)} />
+            }.bind(this))}
           </div>
         </div>
       </div>

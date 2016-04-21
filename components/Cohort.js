@@ -20,7 +20,4 @@ class Cohort extends Component {
   }
 }
 
-
-
-
 export default Cohort
