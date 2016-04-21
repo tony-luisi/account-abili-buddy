@@ -1,14 +1,36 @@
 main {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  background: blue;
 }
 
 .cohort {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 900px;
+  width: 700px;
+  background: green;
+  padding: 10px
+}
+
+.sub-cohort {
+  margin-bottom: 30px;
+  background: yellow;
+  padding: 10px
 }
 
 .sub-cohort-lists {
   display: flex;
   justify-content: space-around;
+  background: red;
+  padding: 10px
+}
+
+.lists {
+  margin: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: purple;
 }
