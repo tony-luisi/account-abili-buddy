@@ -1,0 +1,14 @@
+main {
+  text-align: center;
+}
+
+.cohort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sub-cohort {
+  display: flex;
+  justify-content: space-between;
+}
