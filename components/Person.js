@@ -6,7 +6,12 @@ class Person extends Component {
   }
 
   clicky () {
-    this.props.callback(this.props.name)
+    var store = this.props.store
+    if(this.props.isChecked){
+      store.dispatch({ type: 'CHECK_OUT_PERSON' , name: this.props.name, subcohort: this.props.subcohort })
+    } else {
+      store.dispatch({ type: 'CHECK_IN_PERSON', name: this.props.name, subcohort: this.props.subcohort  })
+    }
   }
 
   render(){

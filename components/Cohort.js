@@ -6,14 +6,14 @@ class Cohort extends Component {
     super(props)
   }
   render(){
-    var subgroups = this.props.subgroups
+    var subgroups = this.props.store.getState()
     return (
       <div className='cohort'>
         <h1>{this.props.name}</h1>
         <div>
           {subgroups.map(function(subgroup, i){
-            return <SubCohort key={i} name={subgroup.name} checkedIn={subgroup.checkedIn} checkedOut={subgroup.checkedOut} />
-          })}
+            return <SubCohort key={i} name={subgroup.name} checkedIn={subgroup.checkedIn} checkedOut={subgroup.checkedOut} store={this.props.store}/>
+          }, this)}
         </div>
       </div>
     )
