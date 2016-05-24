@@ -1,7 +1,11 @@
 
 # account-abili-buddy
 
-awesome
+An app that allows people to check in by clicking their name (e.g. like taking an attendance roll).
+
+## technology stack
+
+- Client-side rendering using React
 
 ## how
 
@@ -9,7 +13,7 @@ awesome
 
 ```
 git clone https://github.com/tony-luisi/account-abili-buddy
-cd 
+cd
 npm install
 ```
 
