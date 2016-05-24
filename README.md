@@ -1,7 +1,7 @@
 
 # account-abili-buddy
 
-An app that allows people to check in by clicking their name (e.g. like taking an attendance roll).
+An simple app that allows people to check in by clicking their name (e.g. like taking an attendance roll). Demonstrates the use of react.
 
 ## technology stack
 
